@@ -23,5 +23,8 @@ namespace BlockchainWebApp.Models
 
         [Required]
         public string License { get; set; }
+
+        [Required]
+        public string VehicleName { get; set; }
     }
 }
