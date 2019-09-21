@@ -8,10 +8,14 @@ namespace BlockchainWebApp.Services
 {
     public interface IBlockchainService
     {
-        List<Block> GetBlockchain();
-        bool AddBlock(string data);
+        Task<List<Block>> GetBlockchain();
+        Task<bool> AddBlock(string data);
 
-        Task<List<Block>> GetBlockchain2();
-        Task<bool> AddBlock2(string data);
+        Task<List<Block>> TestGetBlockchain();
+        Task<bool> TestAddBlock(string data);
+        Task<bool> TestChangeBlock(int index, string data);
+        double TestMineBlock(int difficulty);
+        Task<List<Block>> TestIsBlockchainValid();
+        Task<EmptyResp> TestMineBlock2(int index);
     }
 }
