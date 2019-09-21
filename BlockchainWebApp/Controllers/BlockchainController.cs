@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace BlockchainWebApp.Controllers
 {
-    [Route("api/[controller]/[action]")]
-    [ApiController]
+    //[Route("api/[controller]/[action]")]
+    //[ApiController]
     public class BlockchainController : Controller
     {
         private readonly IBlockchainService _blockchainService;
@@ -24,7 +24,7 @@ namespace BlockchainWebApp.Controllers
         public async Task<IActionResult> GetBlockchain()
         {
             //List<Block> blockchain = _blockchainService.GetBlockchain();
-            List<Block> blockchain = await _blockchainService.GetBlockchain2();
+            List<Block> blockchain = await _blockchainService.GetBlockchain();
 
             if (blockchain == null)
             {
@@ -43,7 +43,7 @@ namespace BlockchainWebApp.Controllers
             }
 
             //bool resp = _blockchainService.AddBlock(JsonConvert.SerializeObject(carData));
-            bool resp = await _blockchainService.AddBlock2(JsonConvert.SerializeObject(carData));
+            bool resp = await _blockchainService.AddBlock(JsonConvert.SerializeObject(carData));
 
             if (!resp)
             {
