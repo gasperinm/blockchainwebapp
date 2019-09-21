@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace BlockchainWebApp.Controllers
 {
+    [Route("api/[controller]/[action]")]
+    [ApiController]
     public class TestController : Controller
     {
         private readonly IBlockchainService _blockchainService;
