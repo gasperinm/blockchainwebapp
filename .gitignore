@@ -49,6 +49,7 @@ dlldata.c
 BenchmarkDotNet.Artifacts/
 
 # .NET Core
+appsettings.json
 project.lock.json
 project.fragment.lock.json
 artifacts/
@@ -328,3 +329,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# Other
+blockchain.json
